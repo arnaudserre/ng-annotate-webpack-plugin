@@ -1,19 +1,15 @@
-ng-annotate-webpack-plugin
+ng-annotate-webpack-plugin-patched
 ==========================
 
-ng-annotate is deprecated. Consider using https://github.com/schmod/babel-plugin-angularjs-annotate instead.
+WebPack plugin that runs [ng-annotate-patched](https://github.com/bluetech/ng-annotate-patched) on your bundles
 
----
-
-WebPack plugin that runs [ng-annotate](https://github.com/olov/ng-annotate) on your bundles
-
-Based on [ngmin-webpack-plugin](https://github.com/jeffling/ngmin-webpack-plugin)
+Fork of [ng-annotate-webpack-plugin](https://github.com/jeffling/ng-annotate-webpack-plugin)
 
 # Usage
 In webpack.config.js:
 ```javascript
 var webpack = require('webpack');
-var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin-patched');
 
 module.exports = {
     /// ... rest of config
@@ -25,7 +21,7 @@ module.exports = {
 To modify the default plugin options or to add options for `ng-annotate`:
 ```javascript
 var webpack = require('webpack');
-var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin-patched');
 
 module.exports = {
     /// ... rest of config
@@ -44,7 +40,7 @@ annotated. To customize this behavior, set the option `annotateChunk` to a metho
 
 ```javascript
 var webpack = require('webpack');
-var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin-patched');
 
 module.exports = {
     /// ... rest of config
@@ -57,5 +53,3 @@ module.exports = {
     ]
 }
 ```
-
-If you are looking for a loader instead of a plugin, use [ng-annotate-loader](https://github.com/huston007/ng-annotate-loader) instead
