@@ -15,7 +15,7 @@ ngAnnotatePlugin.prototype.apply = function apply(compiler) {
     };
 
     compiler.hooks.compilation.tap('NgAnnotateWebpackPlugin', function(compilation) {
-        compilation.hooks.optimizeChunkAssets.tapAsync('NgAnnotateWebpackPlugin', function(chunks, callback) {
+        compilation.hooks.processAssets.tapAsync('NgAnnotateWebpackPlugin', function(chunks, callback) {
             var files = [];
 
             function getFilesFromChunk(chunk) {
